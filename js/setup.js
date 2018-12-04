@@ -18,9 +18,9 @@ var getRandomDescription = function (arrayName) {
   return randomDescription;
 };
 
-var generateWizardsData = function (WIZARDS_NUMBER) {
+var generateWizardsData = function (WIZARDS_LOCALNUMBER) {
   var wizards = [];
-  for (var i = 0; i < WIZARDS_NUMBER; i++) {
+  for (var i = 0; i < WIZARDS_LOCALNUMBER; i++) {
     var wizardName = getRandomDescription(WIZARD_NAMES) + ' ' + getRandomDescription(WIZARD_SURNAMES);
     var wizardCoatColor = getRandomDescription(COAT_COLORS);
     var wizardEyesColor = getRandomDescription(EYES_COLORS);
