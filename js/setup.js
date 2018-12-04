@@ -18,7 +18,7 @@ var getRandomDescription = function (arrayName) {
   return randomDescription;
 };
 
-var getNewWizard = function () {
+var generateWizardsData = function (WIZARDS_NUMBER) {
   var wizards = [];
   for (var i = 0; i < WIZARDS_NUMBER; i++) {
     var wizardName = getRandomDescription(WIZARD_NAMES) + ' ' + getRandomDescription(WIZARD_SURNAMES);
@@ -28,8 +28,6 @@ var getNewWizard = function () {
   }
   return wizards;
 };
-
-getNewWizard();
 
 var renderWizard = function (wizard) {
   var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
@@ -50,6 +48,6 @@ var renderNewWizards = function (wizards) {
   similarListElement.appendChild(fragment);
 };
 
-renderNewWizards(getNewWizard());
+renderNewWizards(generateWizardsData(WIZARDS_NUMBER));
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
